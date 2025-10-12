@@ -39,11 +39,8 @@ To avoid aliasing artifacts, [Distributed Ray Tracing (DRT)](https://en.wikipedi
 *comparison with and without SSAA anti-aliasing enabled*
 
 ### Acceleration structures & culling
-AABB bounding boxes are used as [bounding volumes](https://en.wikipedia.org/wiki/Bounding_volume) for culling. Additionally, [Back-face culling](https://en.wikipedia.org/wiki/Back-face_culling) can be enabled for triangles.
-
-This means that meshes outside of the [view frustum](https://en.wikipedia.org/wiki/Viewing_frustum) are not rendered, and rays pass through triangles which are oriented counter-clockwise relative to the ray's direction.
-
-In the future I would like to expand on these acceleration structures and create a [Bounding Volume Hierarchy (BVH)](https://en.wikipedia.org/wiki/Bounding_volume_hierarchy) for them to allow for quick and easy updating.
+Simple AABB bounding boxes are used as [bounding volumes](https://en.wikipedia.org/wiki/Bounding_volume) for ray intersection tests. Additionally, [Back-face culling](https://en.wikipedia.org/wiki/Back-face_culling) can be enabled for triangles.
+In the future I would like to expand on these acceleration structures and create a [Bounding Volume Hierarchy (BVH)](https://en.wikipedia.org/wiki/Bounding_volume_hierarchy).
 
 ## Setup
 ### Downloading the repository
